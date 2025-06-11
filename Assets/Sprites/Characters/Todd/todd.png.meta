@@ -1,0 +1,1245 @@
+fileFormatVersion: 2
+guid: 5d2130be97c9eed428d079733b632646
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4776523847721300896
+    second: todd_0
+  - first:
+      213: -3967027150470514207
+    second: todd_1
+  - first:
+      213: -6774142057916688853
+    second: todd_2
+  - first:
+      213: -2977673434168370563
+    second: todd_3
+  - first:
+      213: -7402745494117004917
+    second: todd_4
+  - first:
+      213: -2730600092711660459
+    second: todd_5
+  - first:
+      213: 7872351517753194559
+    second: todd_6
+  - first:
+      213: -485007237873767409
+    second: todd_7
+  - first:
+      213: -2497684302899813162
+    second: todd_8
+  - first:
+      213: -2846739323696416063
+    second: todd_9
+  - first:
+      213: -5001060994606152071
+    second: todd_10
+  - first:
+      213: -2321577440192018781
+    second: todd_11
+  - first:
+      213: -3275698618105843635
+    second: todd_12
+  - first:
+      213: 5482076112009312842
+    second: todd_13
+  - first:
+      213: -5854150582426777431
+    second: todd_14
+  - first:
+      213: 2627029324711581953
+    second: todd_15
+  - first:
+      213: -7621962746578031816
+    second: todd_16
+  - first:
+      213: -1636179636633441246
+    second: todd_17
+  - first:
+      213: -5041216593680247888
+    second: todd_18
+  - first:
+      213: -6440255553976451735
+    second: todd_19
+  - first:
+      213: 6348128322462154475
+    second: todd_20
+  - first:
+      213: 6426070331969462120
+    second: todd_21
+  - first:
+      213: 6916844477717170973
+    second: todd_22
+  - first:
+      213: 5105099796716876802
+    second: todd_23
+  - first:
+      213: -7720612118111865126
+    second: todd_24
+  - first:
+      213: -1158684758914874883
+    second: todd_25
+  - first:
+      213: -6012272125945161582
+    second: todd_26
+  - first:
+      213: 282640547679041429
+    second: todd_27
+  - first:
+      213: -1773034702015256725
+    second: todd_28
+  - first:
+      213: 9018123222805434842
+    second: todd_29
+  - first:
+      213: -1036398893318224874
+    second: todd_30
+  - first:
+      213: 4753447743011116654
+    second: todd_31
+  - first:
+      213: -2282650213839848030
+    second: todd_32
+  - first:
+      213: 5958835393612883733
+    second: todd_33
+  - first:
+      213: -9114133477949349654
+    second: todd_34
+  - first:
+      213: -3973106312210029707
+    second: todd_35
+  - first:
+      213: 186717321681682375
+    second: todd_36
+  - first:
+      213: 3767993205320848286
+    second: todd_37
+  - first:
+      213: -8023320180217406849
+    second: todd_38
+  - first:
+      213: -1973996017065393638
+    second: todd_39
+  - first:
+      213: -3736566603234179591
+    second: todd_40
+  - first:
+      213: 7169635684531660446
+    second: todd_41
+  - first:
+      213: 5254495483830154029
+    second: todd_42
+  - first:
+      213: 720629946514129719
+    second: todd_43
+  - first:
+      213: 7944807426480673945
+    second: todd_44
+  - first:
+      213: 1187757767705227857
+    second: todd_45
+  - first:
+      213: -6825916140466838243
+    second: todd_46
+  - first:
+      213: -5589536956518420292
+    second: todd_47
+  - first:
+      213: 2796395579454824318
+    second: todd_48
+  - first:
+      213: 1195641095837297432
+    second: todd_49
+  - first:
+      213: 7759247626943856539
+    second: todd_50
+  - first:
+      213: 3802158581796550688
+    second: todd_51
+  - first:
+      213: -5041896264710881152
+    second: todd_52
+  - first:
+      213: -6639786207184447979
+    second: todd_53
+  - first:
+      213: 7119495341406688203
+    second: todd_54
+  - first:
+      213: 4255664871767946448
+    second: todd_55
+  - first:
+      213: 108670480953789280
+    second: todd_56
+  - first:
+      213: -6325651959043593407
+    second: todd_57
+  - first:
+      213: -31271376325666959
+    second: todd_58
+  - first:
+      213: 8526588872844585643
+    second: todd_59
+  - first:
+      213: -8974100353740748981
+    second: todd_60
+  - first:
+      213: 3009303038648884301
+    second: todd_61
+  - first:
+      213: 7731545605415862738
+    second: todd_62
+  - first:
+      213: 3078186526384124332
+    second: todd_63
+  - first:
+      213: -1194895358897451350
+    second: todd_64
+  - first:
+      213: 3770720362621040833
+    second: todd_65
+  - first:
+      213: -5663239143685028324
+    second: todd_66
+  - first:
+      213: -1229159572446452940
+    second: todd_67
+  - first:
+      213: 7627794623683454459
+    second: todd_68
+  - first:
+      213: -7241969958665877277
+    second: todd_69
+  - first:
+      213: -2588540056650431500
+    second: todd_70
+  - first:
+      213: -8575350250580961897
+    second: todd_71
+  - first:
+      213: 3350975135557789435
+    second: todd_72
+  - first:
+      213: -6692477383885378381
+    second: todd_73
+  - first:
+      213: -3958195664445344147
+    second: todd_74
+  - first:
+      213: -7013996123528020052
+    second: todd_75
+  - first:
+      213: 6686207072660490477
+    second: todd_76
+  - first:
+      213: -3839464842918290698
+    second: todd_77
+  - first:
+      213: 8483583650231462409
+    second: todd_78
+  - first:
+      213: -7277350306656172594
+    second: todd_79
+  - first:
+      213: 398107026812192777
+    second: todd_80
+  - first:
+      213: -605234409993008652
+    second: todd_81
+  - first:
+      213: -2202677127497048747
+    second: todd_82
+  - first:
+      213: -4261256226130270381
+    second: todd_83
+  - first:
+      213: -3497612468661348178
+    second: todd_84
+  - first:
+      213: -4365332153143464128
+    second: todd_85
+  - first:
+      213: 3199790840420739814
+    second: todd_86
+  - first:
+      213: -5933310030162578246
+    second: todd_87
+  - first:
+      213: -4710650451555858167
+    second: todd_88
+  - first:
+      213: -2905128739853384438
+    second: todd_89
+  - first:
+      213: -7048312308090618688
+    second: todd_90
+  - first:
+      213: -8092809141158926592
+    second: todd_91
+  - first:
+      213: -2019113282861713554
+    second: todd_92
+  - first:
+      213: -6748909808163326900
+    second: todd_93
+  - first:
+      213: -1491846741861164796
+    second: todd_94
+  - first:
+      213: 1303943795456309634
+    second: todd_95
+  - first:
+      213: -8205425275014178558
+    second: todd_96
+  - first:
+      213: -1740211588885048040
+    second: todd_97
+  - first:
+      213: -6228134634572098871
+    second: todd_98
+  - first:
+      213: -5461840918127687293
+    second: todd_99
+  - first:
+      213: 6339958456396511746
+    second: todd_100
+  - first:
+      213: 8923733166458407870
+    second: todd_101
+  - first:
+      213: -5284087412543582481
+    second: todd_102
+  - first:
+      213: -7782257496105499631
+    second: todd_103
+  - first:
+      213: 7332628821637271636
+    second: todd_104
+  - first:
+      213: 2476994690010559891
+    second: todd_105
+  - first:
+      213: -2558720187655470457
+    second: todd_106
+  - first:
+      213: 5064586387657098585
+    second: todd_107
+  - first:
+      213: -4834714569405408542
+    second: todd_108
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: todd_idle_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2697d370b96df1a0800000000000000
+      internalID: -6774142057916688853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ad64bb9cd2da6d0800000000000000
+      internalID: -2977673434168370563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 639
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89488cc13a244990800000000000000
+      internalID: -7402745494117004917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554d54adea5fa1ad0800000000000000
+      internalID: -2730600092711660459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38bfa2fef5304d60800000000000000
+      internalID: 7872351517753194559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c6a01ac78e449f0800000000000000
+      internalID: -485007237873767409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_6
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 639
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4669c1c51765dd0800000000000000
+      internalID: -2497684302899813162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_idle_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 639
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca70f2faa95e78d0800000000000000
+      internalID: -2846739323696416063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 591
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a38f7bd2f341c40800000000000000
+      internalID: 5482076112009312842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 591
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a84ec8df01e1cea0800000000000000
+      internalID: -5854150582426777431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 591
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109d7f19045157420800000000000000
+      internalID: 2627029324711581953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 591
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ba4fec349593690800000000000000
+      internalID: -7621962746578031816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_4
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 591
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c6cb11a4f1b49e0800000000000000
+      internalID: -1636179636633441246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_attack_5
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 591
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b352e1b7300a0ab0800000000000000
+      internalID: -5041216593680247888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 399
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bad3ced35c79010800000000000000
+      internalID: 1195641095837297432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 399
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ff7404b926eab60800000000000000
+      internalID: 7759247626943856539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 399
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028bfafd51bf3c430800000000000000
+      internalID: 3802158581796550688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 400
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0800a837f06970ab0800000000000000
+      internalID: -5041896264710881152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_4
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 399
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5169b38af9dbad3a0800000000000000
+      internalID: -6639786207184447979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_pickingUp_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 399
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc31894da478dc260800000000000000
+      internalID: 7119495341406688203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_running_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 351
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177987259d6e09ff0800000000000000
+      internalID: -31271376325666959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_running_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 351
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa23bf6767845670800000000000000
+      internalID: 8526588872844585643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_running_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 351
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47439c6647957380800000000000000
+      internalID: -8974100353740748981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_running_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 351
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c9b207b2133c920800000000000000
+      internalID: 3009303038648884301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_running_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 351
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d18b8fb3c7fb4b60800000000000000
+      internalID: 7731545605415862738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_jump_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 255
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf3529ffa749ae90800000000000000
+      internalID: -7013996123528020052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_jump_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 255
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de802a458ed2acc50800000000000000
+      internalID: 6686207072660490477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_jump_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 255
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa1146511b77bac0800000000000000
+      internalID: -3839464842918290698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_jump_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 255
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90aab56c16ebbb570800000000000000
+      internalID: 8483583650231462409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_jump_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 255
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5cda10478a10b90800000000000000
+      internalID: -7277350306656172594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_air_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 159
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05c24a9dc8eea7d0800000000000000
+      internalID: -2905128739853384438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c3bf1c2fbcd07284ebc34e96be4258ee
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      todd_0: -4776523847721300896
+      todd_1: -3967027150470514207
+      todd_10: -5001060994606152071
+      todd_100: 6339958456396511746
+      todd_101: 8923733166458407870
+      todd_102: -5284087412543582481
+      todd_103: -7782257496105499631
+      todd_104: 7332628821637271636
+      todd_105: 2476994690010559891
+      todd_106: -2558720187655470457
+      todd_107: 5064586387657098585
+      todd_108: -4834714569405408542
+      todd_11: -2321577440192018781
+      todd_12: -3275698618105843635
+      todd_19: -6440255553976451735
+      todd_20: 6348128322462154475
+      todd_21: 6426070331969462120
+      todd_25: -1158684758914874883
+      todd_26: -6012272125945161582
+      todd_27: 282640547679041429
+      todd_28: -1773034702015256725
+      todd_29: 9018123222805434842
+      todd_30: -1036398893318224874
+      todd_31: 4753447743011116654
+      todd_32: -2282650213839848030
+      todd_33: 5958835393612883733
+      todd_34: -9114133477949349654
+      todd_35: -3973106312210029707
+      todd_36: 186717321681682375
+      todd_37: 3767993205320848286
+      todd_38: -8023320180217406849
+      todd_39: -1973996017065393638
+      todd_40: -3736566603234179591
+      todd_41: 7169635684531660446
+      todd_42: 5254495483830154029
+      todd_43: 720629946514129719
+      todd_44: 7944807426480673945
+      todd_45: 1187757767705227857
+      todd_46: -6825916140466838243
+      todd_47: -5589536956518420292
+      todd_48: 2796395579454824318
+      todd_55: 4255664871767946448
+      todd_56: 108670480953789280
+      todd_57: -6325651959043593407
+      todd_63: 3078186526384124332
+      todd_64: -1194895358897451350
+      todd_65: 3770720362621040833
+      todd_66: -5663239143685028324
+      todd_67: -1229159572446452940
+      todd_68: 7627794623683454459
+      todd_69: -7241969958665877277
+      todd_70: -2588540056650431500
+      todd_71: -8575350250580961897
+      todd_72: 3350975135557789435
+      todd_73: -6692477383885378381
+      todd_74: -3958195664445344147
+      todd_80: 398107026812192777
+      todd_81: -605234409993008652
+      todd_82: -2202677127497048747
+      todd_83: -4261256226130270381
+      todd_84: -3497612468661348178
+      todd_85: -4365332153143464128
+      todd_86: 3199790840420739814
+      todd_87: -5933310030162578246
+      todd_88: -4710650451555858167
+      todd_90: -7048312308090618688
+      todd_91: -8092809141158926592
+      todd_92: -2019113282861713554
+      todd_93: -6748909808163326900
+      todd_94: -1491846741861164796
+      todd_95: 1303943795456309634
+      todd_96: -8205425275014178558
+      todd_97: -1740211588885048040
+      todd_98: -6228134634572098871
+      todd_99: -5461840918127687293
+      todd_air_0: -2905128739853384438
+      todd_attack_0: 5482076112009312842
+      todd_attack_1: -5854150582426777431
+      todd_attack_2: 2627029324711581953
+      todd_attack_3: -7621962746578031816
+      todd_attack_4: -1636179636633441246
+      todd_attack_5: -5041216593680247888
+      todd_idle_0: -6774142057916688853
+      todd_idle_1: -2977673434168370563
+      todd_idle_2: -7402745494117004917
+      todd_idle_3: -2730600092711660459
+      todd_idle_4: 7872351517753194559
+      todd_idle_5: -485007237873767409
+      todd_idle_6: -2497684302899813162
+      todd_idle_7: -2846739323696416063
+      todd_jump_0: -7013996123528020052
+      todd_jump_1: 6686207072660490477
+      todd_jump_2: -3839464842918290698
+      todd_jump_3: 8483583650231462409
+      todd_jump_4: -7277350306656172594
+      todd_pickingUp_0: 1195641095837297432
+      todd_pickingUp_1: 7759247626943856539
+      todd_pickingUp_2: 3802158581796550688
+      todd_pickingUp_3: -5041896264710881152
+      todd_pickingUp_4: -6639786207184447979
+      todd_pickingUp_5: 7119495341406688203
+      todd_running_0: -31271376325666959
+      todd_running_1: 8526588872844585643
+      todd_running_2: -8974100353740748981
+      todd_running_3: 3009303038648884301
+      todd_running_4: 7731545605415862738
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
