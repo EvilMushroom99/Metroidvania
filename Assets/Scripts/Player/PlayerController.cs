@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Stats Settings")]
+    [Header("Speed Settings")]
     [SerializeField] private float speed;
     [SerializeField] private float speedMultiplier;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.actions["Move"].performed += Move;
         playerInput.actions["Move"].canceled += Move;
-        playerInput.actions["Jump"].performed += JUMP;
+        playerInput.actions["Jump"].performed += Jump;
     }
 
     private void Move(InputAction.CallbackContext ctx)
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void JUMP(InputAction.CallbackContext ctx)
+    private void Jump(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && isGrounded)
         {
@@ -86,6 +86,6 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.actions["Move"].started -= Move;
         playerInput.actions["Move"].canceled -= Move;
-        playerInput.actions["Jump"].performed -= JUMP;
+        playerInput.actions["Jump"].performed -= Jump;
     }
 }
