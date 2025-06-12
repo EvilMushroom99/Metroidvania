@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
     bool isRunning;
-    bool isJumping;
 
     private void Awake()
     {
@@ -59,7 +58,6 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed && isGrounded)
         {
-            isJumping = true;
             rb.AddForce(new Vector2(rb.linearVelocity.x, jumpForce), ForceMode2D.Impulse);
         }
     }

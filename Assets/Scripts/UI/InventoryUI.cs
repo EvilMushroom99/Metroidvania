@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private Transform inventoryParent;
     [SerializeField] private GameObject slotPrefab;
-    [SerializeField] private PlayerInventory inventory;
 
     private void Awake()
     {
@@ -20,10 +18,11 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item, int index)
+    public void AddItem(Item item, int index, int quantity)
     {
+        Debug.Log("adding Item to: " + index + " el item: " + item + " y la cantidad: " + quantity);
         InventorySlotUI slot = inventoryParent.GetChild(index).GetComponent<InventorySlotUI>();
-        slot.InitializeSlot(item, 1);
+        slot.InitializeSlot(item, quantity);
     }
 
     public void ChangeSlotQuantity(int quantity, int index)
@@ -34,15 +33,5 @@ public class InventoryUI : MonoBehaviour
     public void DeleteSlot(int index)
     {
         inventoryParent.GetChild(index).GetComponent<InventorySlotUI>().ClearSlot();
-    }
-
-    public void ChangeSlotPosition()
-    {
-
-    }
-
-    public void SwapSlots()
-    {
-
     }
 }

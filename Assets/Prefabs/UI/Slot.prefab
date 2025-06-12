@@ -752,5 +752,6 @@ MonoBehaviour:
   descriptionUI: {fileID: 1801093150510192796}
   descriptionParentUI: {fileID: 108137330755618449}
   removeButton: {fileID: 2108786816035284622}
-  useButton: {fileID: 0}
+  iconButton: {fileID: 6513080393050614472}
+  canvas: {fileID: 0}
   inventory: {fileID: 0}

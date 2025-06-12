@@ -16,7 +16,7 @@ public class ItemController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerInventory>().AddItem(item);
+            PlayerInventory.Instance.AddItem(item);
         }
     }
 
@@ -24,7 +24,7 @@ public class ItemController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerInventory>().AddItem(item);
+            PlayerInventory.Instance.AddItem(item);
         }
     }
 }
