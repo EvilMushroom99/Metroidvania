@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: -58.27, y: 0.000015258789}
   m_SizeDelta: {x: 141.3898, y: 56.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8962951346320776336
@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5117205347682908959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -750,5 +750,7 @@ MonoBehaviour:
   quantityUI: {fileID: 7624039977929623217}
   itemNameUI: {fileID: 5580305904609075500}
   descriptionUI: {fileID: 1801093150510192796}
-  removeButton: {fileID: 0}
+  descriptionParentUI: {fileID: 108137330755618449}
+  removeButton: {fileID: 2108786816035284622}
   useButton: {fileID: 0}
+  inventory: {fileID: 0}

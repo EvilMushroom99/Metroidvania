@@ -5,7 +5,22 @@ public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private int maxSlots;
-    private List<InventorySlot> slots = new();
+    private List<InventorySlot> slots;
+
+
+    private void Awake()
+    {
+        InitializeInventory();
+    }
+
+    public void InitializeInventory()
+    {
+        slots = new List<InventorySlot>(maxSlots);
+        for (int i = 0; i < maxSlots; i++)
+        {
+            slots.Add(new InventorySlot(null,i,0));
+        }
+    }
 
     public void AddItem(Item item)
     {
@@ -19,41 +34,45 @@ public class PlayerInventory : MonoBehaviour
                 Debug.Log("Agregando item existente");
                 return;
             }
+            else
+            {
+                Debug.Log("No existe este item en el inventario");
+            }
         }
 
-        if (slots.Count >= maxSlots)
+        InventorySlot emptySlot = slots.Find(slot => slot.item == null);
+        if (emptySlot == null)
         {
             Debug.Log("No hay espacio en el inventario");
             return;
         }
-
-        InventorySlot newSlot = new(item, slots.Count, 1);
-        slots.Add(newSlot);
-        inventoryUI.AddItem(item);
+        emptySlot.item = item;
+        emptySlot.quantity = 1;
+        inventoryUI.AddItem(item, slots.IndexOf(emptySlot));
         Debug.Log("Agregando nuevo item");
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(Item item, int index)
     {
-        InventorySlot slot = slots.Find(s => s.item == item);
+        InventorySlot slot = slots[index];
         if (slot != null)
         {
             slot.quantity--;
-            inventoryUI.ChangeSlotQuantity(slot.quantity, slots.IndexOf(slot));
+            inventoryUI.ChangeSlotQuantity(slot.quantity, index);
             Debug.Log("Item Eliminado eliminado");
 
             if (slot.quantity <= 0)
             {
-                inventoryUI.DeleteSlot(slots.IndexOf(slot));
-                slots.Remove(slot);
+                slot.item = null;
+                inventoryUI.DeleteSlot(index);
                 Debug.Log("Slot eliminado");
             }
         }
     }
 
-    public void UseItem(Item item)
+    public void UseItem(Item item, int index)
     {
         item.Use();
-        RemoveItem(item);
+        RemoveItem(item, index);
     }
 }
