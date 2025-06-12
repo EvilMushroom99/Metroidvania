@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0efdb8bc6d2fb74492462c2a6839a96, type: 3}
-  m_Name: NewHealingItem
+  m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  itemName: HealingPotion
-  itemDescription: You can use this potion to recover your Health.
+  itemName: Health Potion
+  itemDescription: Use this potion to restore your health
   stack: 16
-  icon: {fileID: -7583409310137716746, guid: ac523bfd1aa66774481e87c3c2d1d3b5, type: 3}
-  healAmount: 10
+  itemIcon: {fileID: -7583409310137716746, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
+  healAmount: 15

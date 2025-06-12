@@ -11,25 +11,26 @@ public class PlayerInventory : MonoBehaviour
     {
         if (item.stack > 1)
         {
-            InventorySlot existingSlot = slots.Find(slot => slot.item == item);
-            if (existingSlot != null)
+            InventorySlot existingSlot = slots.Find(slot => slot.item == item && slot.quantity < item.stack);
+            if (existingSlot != null && existingSlot.quantity < item.stack)
             {
                 existingSlot.quantity++;
                 inventoryUI.ChangeSlotQuantity(existingSlot.quantity, slots.IndexOf(existingSlot));
                 Debug.Log("Agregando item existente");
-            }
-            else if (slots.Count >= maxSlots)
-            {
-                Debug.Log("No hay espacio en el inventario");
-            }
-            else
-            {
-                InventorySlot newSlot = new(item, slots.Count, 1);
-                slots.Add(newSlot);
-                inventoryUI.AddItem(item);
-                Debug.Log("Agregando nuevo item");
+                return;
             }
         }
+
+        if (slots.Count >= maxSlots)
+        {
+            Debug.Log("No hay espacio en el inventario");
+            return;
+        }
+
+        InventorySlot newSlot = new(item, slots.Count, 1);
+        slots.Add(newSlot);
+        inventoryUI.AddItem(item);
+        Debug.Log("Agregando nuevo item");
     }
 
     public void RemoveItem(Item item)
@@ -43,9 +44,16 @@ public class PlayerInventory : MonoBehaviour
 
             if (slot.quantity <= 0)
             {
+                inventoryUI.DeleteSlot(slots.IndexOf(slot));
                 slots.Remove(slot);
                 Debug.Log("Slot eliminado");
             }
         }
+    }
+
+    public void UseItem(Item item)
+    {
+        item.Use();
+        RemoveItem(item);
     }
 }

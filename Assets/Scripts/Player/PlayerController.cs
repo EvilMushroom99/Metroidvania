@@ -3,8 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerInventory inventory;
-
     [Header("Speed Settings")]
     [SerializeField] private float speed;
     [SerializeField] private float speedMultiplier;
@@ -91,14 +89,5 @@ public class PlayerController : MonoBehaviour
         playerInput.actions["Move"].started -= Move;
         playerInput.actions["Move"].canceled -= Move;
         playerInput.actions["Jump"].performed -= Jump;
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("item"))
-        {
-            inventory.AddItem(collision.GetComponent<Item>());
-        }
     }
 }

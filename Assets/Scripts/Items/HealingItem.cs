@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewHealingItem", menuName = "Inventory/HealingItem")]
-public class HealthPotion : Item
+public class HealingItem : Item
 {
     public int healAmount;
 
