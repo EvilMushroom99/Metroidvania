@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform inventoryParent;
 
     public void InitializeSlots()
@@ -26,5 +27,21 @@ public class InventoryUI : MonoBehaviour
     public void DeleteSlot(int index)
     {
         inventoryParent.GetChild(index).GetComponent<InventorySlotUI>().ClearSlot();
+    }
+
+    public void ActiveInventory()
+    {
+        if (inventoryPanel.activeInHierarchy)
+        {
+            for (int i = 0; i < inventoryParent.childCount; i++)
+            {
+                inventoryParent.GetChild(i).GetComponent<InventorySlotUI>().EndDrag();
+            }
+            inventoryPanel.SetActive(false);
+        }
+        else
+        {
+            inventoryPanel.SetActive(true);
+        }
     }
 }

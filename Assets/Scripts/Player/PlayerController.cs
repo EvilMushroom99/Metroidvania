@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         playerInput.actions["Move"].performed += Move;
         playerInput.actions["Move"].canceled += Move;
         playerInput.actions["Jump"].performed += Jump;
+        playerInput.actions["Inventory"].performed += Inventory;
     }
 
     private void Move(InputAction.CallbackContext ctx)
@@ -59,6 +60,14 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed && isGrounded)
         {
             rb.AddForce(new Vector2(rb.linearVelocity.x, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+
+    private void Inventory(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            PlayerInventory.Instance.OpenInventory();
         }
     }
 
@@ -87,5 +96,6 @@ public class PlayerController : MonoBehaviour
         playerInput.actions["Move"].started -= Move;
         playerInput.actions["Move"].canceled -= Move;
         playerInput.actions["Jump"].performed -= Jump;
+        playerInput.actions["Inventory"].performed -= Inventory;
     }
 }

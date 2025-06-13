@@ -47,6 +47,11 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public void OpenInventory()
+    {
+        inventoryUI.ActiveInventory();
+    }
+
     public void AddItem(Item item)
     {
         if (item.stack > 1)
