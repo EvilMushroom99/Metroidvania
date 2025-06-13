@@ -117,6 +117,7 @@ public class PlayerInventory : MonoBehaviour
             ClearSlot(originslot, originSlotIndex);
             inventoryUI.AddItem(item, index, quantity); 
         }
+        AudioManager.Instance.PlayUI();
     }
 
     public void RemoveItem(Item item, int index)
@@ -132,6 +133,7 @@ public class PlayerInventory : MonoBehaviour
                 ClearSlot(slot, index);
             }
         }
+        AudioManager.Instance.PlayUI();
     }
 
     public void ClearSlot(InventorySlot slot, int index)
@@ -144,6 +146,7 @@ public class PlayerInventory : MonoBehaviour
     public void UseItem(Item item, int index)
     {
         item.Use(playerController);
+        AudioManager.Instance.PlayUseItem();
         RemoveItem(item, index);
     }
 }
