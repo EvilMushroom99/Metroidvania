@@ -6,10 +6,11 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
     private ItemUI itemUI;
     private int index;
 
-    private void Awake()
+    public void SetComponents()
     {
         index = transform.GetSiblingIndex();
         itemUI = GetComponentInChildren<ItemUI>();
+        itemUI.SetComponents();
     }
 
     public void InitializeSlot(Item itemReference, int itemQuantity)

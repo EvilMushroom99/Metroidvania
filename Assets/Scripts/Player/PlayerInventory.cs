@@ -34,6 +34,7 @@ public class PlayerInventory : MonoBehaviour
         {
             slots.Add(new InventorySlot(null,i,0));
         }
+        inventoryUI.InitializeSlots();
     }
 
     public void LoadInventoryItems(List<SlotData> slotDataList)

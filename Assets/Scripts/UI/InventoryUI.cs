@@ -4,11 +4,11 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private Transform inventoryParent;
 
-    public void ClearSlots()
+    public void InitializeSlots()
     {
         for (int i = 0; i < inventoryParent.childCount; i++)
         {
-            inventoryParent.GetChild(i).GetComponent<InventorySlotUI>().ClearSlot();
+            inventoryParent.GetChild(i).GetComponent<InventorySlotUI>().SetComponents();
         }
     }
 

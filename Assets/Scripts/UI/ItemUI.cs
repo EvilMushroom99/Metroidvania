@@ -21,7 +21,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     private Transform originalSlot;
 
-    private void Awake()
+    public void SetComponents()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         image = GetComponent<Image>();
