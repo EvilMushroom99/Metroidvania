@@ -29,6 +29,11 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
         itemUI.ClearItemUI();
     }
 
+    public void EndDrag()
+    {
+        itemUI.ForceEndDrag();
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         if(eventData.pointerDrag != null)

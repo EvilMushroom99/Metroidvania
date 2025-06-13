@@ -83,7 +83,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         removeButton.gameObject.SetActive(false);
         descriptionParentUI.SetActive(false);
-
     }
 
     private void ResetPosition()
@@ -117,6 +116,13 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     }
 
     public void OnEndDrag(PointerEventData eventData)
+    {
+        canvasGroup.blocksRaycasts = true;
+        ResetPosition();
+        DisableSlotElements();
+    }
+
+    public void ForceEndDrag()
     {
         canvasGroup.blocksRaycasts = true;
         ResetPosition();
