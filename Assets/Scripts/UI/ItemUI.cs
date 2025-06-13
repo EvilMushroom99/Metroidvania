@@ -13,6 +13,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     [SerializeField] private Button removeButton;
 
     private CanvasGroup canvasGroup;
+    private Image image;
 
     public Item item;
     public int quantity;
@@ -23,12 +24,15 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        image = GetComponent<Image>();
+        image.enabled = false;
         originalSlot = transform.parent;
         slotIndex = transform.parent.GetSiblingIndex();
     }
 
     public void InitializeItemUI(Item itemReference, int itemQuantity)
     {
+        image.enabled = true;
         item = itemReference;
         quantity = itemQuantity;
         icon.sprite = item.itemIcon;
@@ -57,6 +61,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void ClearItemUI()
     {
+        image.enabled = false;
         icon.enabled = false;
         icon.sprite = null;
         descriptionUI.text = null;
@@ -78,6 +83,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         removeButton.gameObject.SetActive(false);
         descriptionParentUI.SetActive(false);
+
     }
 
     private void ResetPosition()
@@ -101,7 +107,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("start dragging");
         canvasGroup.blocksRaycasts = false;
         GetComponent<RectTransform>().SetParent(itemDragHandler);
     }
@@ -113,7 +118,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("end drag");
         canvasGroup.blocksRaycasts = true;
         ResetPosition();
         DisableSlotElements();
