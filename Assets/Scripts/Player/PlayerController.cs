@@ -5,12 +5,12 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Speed Settings")]
     [SerializeField] private float speed;
-    [SerializeField] private float speedMultiplier;
+    public float speedMultiplier;
 
     [Header("Jump Settings")]
     [SerializeField] private Transform jumpPoint;
     [SerializeField] private float jumpDetection;
-    [SerializeField] private float jumpForce;
+    public float jumpForce;
     [SerializeField] private LayerMask layerMask;
 
     Rigidbody2D rb;

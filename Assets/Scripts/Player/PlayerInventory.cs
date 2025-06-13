@@ -7,6 +7,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private int maxSlots;
     private List<InventorySlot> slots;
+    private PlayerController playerController;
 
     public static PlayerInventory Instance { get; private set; }
 
@@ -19,6 +20,7 @@ public class PlayerInventory : MonoBehaviour
         }
 
         Instance = this;
+        playerController = GetComponent<PlayerController>();
         //DontDestroyOnLoad(gameObject);
     }
 
@@ -141,7 +143,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void UseItem(Item item, int index)
     {
-        item.Use();
+        item.Use(playerController);
         RemoveItem(item, index);
     }
 }

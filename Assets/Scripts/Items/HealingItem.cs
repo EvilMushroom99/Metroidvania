@@ -5,9 +5,10 @@ public class HealingItem : Item
 {
     public int healAmount;
 
-    public override void Use()
+    public override void Use(PlayerController playerController)
     {
-        base.Use();
-        Debug.Log("Curando " + healAmount + " puntos de vida");
+        base.Use(playerController);
+        //player.health += healAmount
+        Debug.Log("Healing " + healAmount + " HP");
     }
 }
