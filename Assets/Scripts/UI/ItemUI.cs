@@ -64,9 +64,20 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         itemNameUI.text = null;
         item = null;
         quantity = 0;
+        DisableSlotElements();
+        ResetPosition();
+    }
+
+    private void EnableSlotElements()
+    {
+        removeButton.gameObject.SetActive(true);
+        descriptionParentUI.SetActive(true);
+    }
+
+    private void DisableSlotElements()
+    {
         removeButton.gameObject.SetActive(false);
         descriptionParentUI.SetActive(false);
-        ResetPosition();
     }
 
     private void ResetPosition()
@@ -79,18 +90,13 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         if (!eventData.pointerDrag)
         {
-            removeButton.gameObject.SetActive(true);
-            descriptionParentUI.SetActive(true);
+            EnableSlotElements();
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!eventData.pointerDrag || !item)
-        {
-            removeButton.gameObject.SetActive(false);
-            descriptionParentUI.SetActive(false);
-        }
+        DisableSlotElements();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -110,5 +116,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         Debug.Log("end drag");
         canvasGroup.blocksRaycasts = true;
         ResetPosition();
+        DisableSlotElements();
     }
 }
