@@ -10,6 +10,6 @@ public abstract class Item : ScriptableObject
 
     public virtual void Use(PlayerController player)
     {
-        Debug.Log("Usando Item: " + itemName);
+        Debug.Log("Using Item: " + itemName);
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e27098887021be42a45522c5ac1a24e, type: 3}
-  m_Name: SpeedPotion
+  m_Name: FeatherFeet
   m_EditorClassIdentifier: 
   id: 2
   itemName: Feather feet
   itemDescription: Increase your Speed Factor
-  stack: 3
+  stack: 1
   itemIcon: {fileID: 8132948862792318974, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
   speedAmount: 1

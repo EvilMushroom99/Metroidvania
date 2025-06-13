@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 3
   itemName: MushroomPower
   itemDescription: Jump higher!
-  stack: 1
+  stack: 3
   itemIcon: {fileID: -7833671090200325546, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
   jumpAmount: 1

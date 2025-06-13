@@ -63,58 +63,60 @@ public class PlayerInventory : MonoBehaviour
             {
                 existingSlot.quantity++;
                 inventoryUI.ChangeSlotQuantity(existingSlot.quantity, slots.IndexOf(existingSlot));
-                return;
+                return; //We added quantity to an existing item on the inventory
             }
         }
 
         InventorySlot emptySlot = slots.Find(slot => slot.item == null);
         if (emptySlot == null)
         {
-            return;
+            return; //There is no more space in the inventory
         }
+        //We add an item in an empty slot
         emptySlot.item = item;
         emptySlot.quantity = 1;
         inventoryUI.AddItem(item, slots.IndexOf(emptySlot), 1);
     }
 
-    public void InsertItem(Item item, int quantity ,int index, int originSlotIndex)
+    public void SwapOrStackItem(Item item, int quantity ,int index, int sourceSlotIndex)
     {
-        
-        InventorySlot slot = slots[index];
-        InventorySlot originslot = slots[originSlotIndex];
-        if (slot.item == item && slot.quantity < item.stack)
+        InventorySlot targetSlot = slots[index];
+        InventorySlot sourceslot = slots[sourceSlotIndex];
+        if (targetSlot.item == item && targetSlot.quantity < item.stack)
         {
-            int total = slot.quantity + quantity;
+            int total = targetSlot.quantity + quantity;
             int rest = total - item.stack;
-            if (rest > 0)
+            if (rest > 0) // if there is rest, we leave the sourceSlot with that and the targetSlot with total-rest
             {
-                originslot.quantity = rest;
-                inventoryUI.ChangeSlotQuantity(originslot.quantity, originSlotIndex);
-                slot.quantity = total - rest;
+                sourceslot.quantity = rest; 
+                inventoryUI.ChangeSlotQuantity(sourceslot.quantity, sourceSlotIndex);
+                targetSlot.quantity = total - rest;
             }
             else
             {
-                slot.quantity = total;
-                ClearSlot(originslot, originSlotIndex);
+                targetSlot.quantity = total; 
+                ClearSlot(sourceslot, sourceSlotIndex);
             }
 
-            inventoryUI.ChangeSlotQuantity(slot.quantity, index);
+            inventoryUI.ChangeSlotQuantity(targetSlot.quantity, index);
             return;
         }
-        else if (slot.item != null)
+        else if (targetSlot.item != null)
         {
-            originslot.quantity = slot.quantity;
-            originslot.item = slot.item;
-            inventoryUI.AddItem(originslot.item, originSlotIndex, originslot.quantity);
-            slot.quantity = quantity;
-            slot.item = item;
-            inventoryUI.AddItem(slot.item, index, slot.quantity); 
+            //Item Swap
+            sourceslot.quantity = targetSlot.quantity;
+            sourceslot.item = targetSlot.item;
+            inventoryUI.AddItem(sourceslot.item, sourceSlotIndex, sourceslot.quantity);
+            targetSlot.quantity = quantity;
+            targetSlot.item = item;
+            inventoryUI.AddItem(targetSlot.item, index, targetSlot.quantity); 
         }
         else
         {
-            slot.quantity = quantity;
-            slot.item = item;
-            ClearSlot(originslot, originSlotIndex);
+            //Item Change Slot
+            targetSlot.quantity = quantity;
+            targetSlot.item = item;
+            ClearSlot(sourceslot, sourceSlotIndex);
             inventoryUI.AddItem(item, index, quantity); 
         }
         AudioManager.Instance.PlayUI();

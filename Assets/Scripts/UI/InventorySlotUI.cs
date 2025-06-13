@@ -39,7 +39,7 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null)
         {
             ItemUI newitemUI = eventData.pointerDrag.GetComponent<ItemUI>();
-            PlayerInventory.Instance.InsertItem(newitemUI.item, newitemUI.quantity, index, newitemUI.slotIndex);
+            PlayerInventory.Instance.SwapOrStackItem(newitemUI.item, newitemUI.quantity, index, newitemUI.slotIndex);
         }
     }
 }

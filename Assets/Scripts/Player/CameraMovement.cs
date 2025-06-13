@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (target != null)
         {
-            Vector3 movePosition = new Vector3(target.position.x + offset, 0f, -10f);
+            Vector3 movePosition = new Vector3(target.position.x + offset, target.position.y + offset, -10f);
             transform.position = Vector3.SmoothDamp(transform.position, movePosition, ref velocity, damping);
         }
     }
