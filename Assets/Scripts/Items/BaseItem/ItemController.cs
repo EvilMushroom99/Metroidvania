@@ -17,6 +17,7 @@ public class ItemController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerInventory.Instance.AddItem(item);
+            AudioManager.Instance.PlayPick();
             Destroy(gameObject);
         }
     }

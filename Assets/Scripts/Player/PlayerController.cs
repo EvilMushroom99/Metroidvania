@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed && isGrounded)
         {
             rb.AddForce(new Vector2(rb.linearVelocity.x, jumpForce), ForceMode2D.Impulse);
+            AudioManager.Instance.PlayJump();
         }
     }
 
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed)
         {
             PlayerInventory.Instance.OpenInventory();
+            AudioManager.Instance.PlayUI();
         }
     }
 
