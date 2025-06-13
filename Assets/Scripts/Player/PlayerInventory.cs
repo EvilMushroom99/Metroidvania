@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [SerializeField] private ItemDataBase itemDataBase;
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private int maxSlots;
     private List<InventorySlot> slots;
@@ -19,7 +20,11 @@ public class PlayerInventory : MonoBehaviour
 
         Instance = this;
         //DontDestroyOnLoad(gameObject);
-        InitializeInventory();
+    }
+
+    public List<InventorySlot> GetInventory()
+    {
+        return slots;
     }
 
     public void InitializeInventory()
@@ -28,6 +33,16 @@ public class PlayerInventory : MonoBehaviour
         for (int i = 0; i < maxSlots; i++)
         {
             slots.Add(new InventorySlot(null,i,0));
+        }
+    }
+
+    public void LoadInventoryItems(List<SlotData> slotDataList)
+    {
+        foreach(SlotData slot in slotDataList)
+        {
+            slots[slot.slotIndex].quantity = slot.itemQuantity;
+            slots[slot.slotIndex].item = itemDataBase.GetItemById(slot.itemId);
+            inventoryUI.AddItem(slots[slot.slotIndex].item, slot.slotIndex, slot.itemQuantity);
         }
     }
 
@@ -40,12 +55,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 existingSlot.quantity++;
                 inventoryUI.ChangeSlotQuantity(existingSlot.quantity, slots.IndexOf(existingSlot));
-                Debug.Log("Agregando item existente");
                 return;
-            }
-            else
-            {
-                Debug.Log("No existe este item en el inventario");
             }
         }
 
@@ -80,7 +90,6 @@ public class PlayerInventory : MonoBehaviour
                 ClearSlot(originslot, originSlotIndex);
             }
 
-            Debug.Log("cantidad del slot: " + slot.quantity);
             inventoryUI.ChangeSlotQuantity(slot.quantity, index);
             return;
         }
@@ -92,12 +101,9 @@ public class PlayerInventory : MonoBehaviour
             slot.quantity = quantity;
             slot.item = item;
             inventoryUI.AddItem(slot.item, index, slot.quantity); 
-            Debug.Log("Swap items");
         }
         else
         {
-            Debug.Log("cantidad: " + quantity);
-
             slot.quantity = quantity;
             slot.item = item;
             ClearSlot(originslot, originSlotIndex);
@@ -112,7 +118,6 @@ public class PlayerInventory : MonoBehaviour
         {
             slot.quantity--;
             inventoryUI.ChangeSlotQuantity(slot.quantity, index);
-            Debug.Log("Item Deleted");
 
             if (slot.quantity <= 0)
             {
@@ -126,7 +131,6 @@ public class PlayerInventory : MonoBehaviour
         slot.item = null;
         slot.quantity = 0;
         inventoryUI.DeleteSlot(index);
-        Debug.Log("Slot eliminado");
     }
 
     public void UseItem(Item item, int index)

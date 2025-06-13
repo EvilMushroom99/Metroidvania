@@ -19,12 +19,4 @@ public class ItemController : MonoBehaviour
             PlayerInventory.Instance.AddItem(item);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerInventory.Instance.AddItem(item);
-        }
-    }
 }

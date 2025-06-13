@@ -3,12 +3,6 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private Transform inventoryParent;
-    [SerializeField] private GameObject slotPrefab;
-
-    private void Awake()
-    {
-        ClearSlots();
-    }
 
     public void ClearSlots()
     {
@@ -20,7 +14,6 @@ public class InventoryUI : MonoBehaviour
 
     public void AddItem(Item item, int index, int quantity)
     {
-        Debug.Log("adding Item to: " + index + " el item: " + item + " y la cantidad: " + quantity);
         InventorySlotUI slot = inventoryParent.GetChild(index).GetComponent<InventorySlotUI>();
         slot.InitializeSlot(item, quantity);
     }
