@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < inventoryParent.childCount; i++)
         {
             ItemUI itemUI = inventoryParent.GetChild(i).GetComponentInChildren<ItemUI>();
-            itemUI.InitializeItemUI(i);
+            itemUI.InitializeItemUI(this, i);
             items.Add(itemUI);
         }
     }
@@ -43,6 +43,14 @@ public class InventoryManager : MonoBehaviour
         {
             items[i].Refresh();
         }
+    }
+
+    public void RemoveItem(int slotIndex)
+    {
+        InventorySlot slot = inventory.GetSlot(slotIndex);
+        if (slot == null || slot.item == null) return;
+
+        inventory.RemoveItem(slot.item, slotIndex);
     }
 
     //OLD

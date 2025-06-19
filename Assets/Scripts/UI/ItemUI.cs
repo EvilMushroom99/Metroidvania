@@ -16,17 +16,18 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     [SerializeField] private GameObject descriptionParentUI;
     [SerializeField] private Button removeButton;
 
+    private InventoryManager manager;
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
+    private Transform originalSlot;
 
     public Item item;
     public int quantity;
     public int slotIndex;
 
-    private Transform originalSlot;
-
-    public void InitializeItemUI(int index)
+    public void InitializeItemUI(InventoryManager inventoryManager, int index)
     {
+        manager = inventoryManager;
         slotIndex = index;
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
@@ -72,7 +73,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         quantityUI.text = itemQuantity.ToString();
     }
 
-    public void ClearItemUI()
+    private void ClearItemUI()
     {
         pickArea.enabled = false;
         icon.enabled = false;
@@ -102,6 +103,11 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         transform.SetParent(originalSlot);
         rectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    public void RemoveItem()
+    {
+        manager.RemoveItem(slotIndex);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
