@@ -1,18 +1,52 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
+    [SerializeField] private InventorySO inventory;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform inventoryParent;
 
-    public void InitializeSlots()
+    private List<ItemUI> items = new();
+
+    private void Awake()
+    {
+        InitializeSlots();
+    }
+
+    private void InitializeSlots()
     {
         for (int i = 0; i < inventoryParent.childCount; i++)
         {
-            inventoryParent.GetChild(i).GetComponent<InventorySlotUI>().SetComponents();
+            ItemUI itemUI = inventoryParent.GetChild(i).GetComponentInChildren<ItemUI>();
+            itemUI.InitializeItemUI(i);
+            items.Add(itemUI);
         }
     }
 
+    public void OpenOrCloseInventory()
+    {
+        if (inventoryPanel.activeInHierarchy) 
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                items[i].ForceEndDrag();
+            }
+            inventoryPanel.SetActive(false);
+        }
+        else inventoryPanel.SetActive(true);
+    }
+
+    public void RefreshInventoryUI()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            items[i].Refresh();
+        }
+    }
+
+    //OLD
+    /*
     public void AddItem(Item item, int index, int quantity)
     {
         InventorySlotUI slot = inventoryParent.GetChild(index).GetComponent<InventorySlotUI>();
@@ -44,4 +78,5 @@ public class InventoryUI : MonoBehaviour
             inventoryPanel.SetActive(true);
         }
     }
+    */
 }
