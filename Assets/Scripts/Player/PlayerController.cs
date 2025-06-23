@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     [SerializeField] private LayerMask layerMask;
 
+    public GameEvent onInventoryOpen;
+
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer spriteRenderer;
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed)
         {
-            PlayerInventory.Instance.OpenInventory();
+            onInventoryOpen.Raise();
             AudioManager.Instance.PlayUI();
         }
     }

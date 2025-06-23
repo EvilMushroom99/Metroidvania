@@ -4,35 +4,59 @@ using UnityEngine.EventSystems;
 
 public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    [SerializeField] private InventorySO inventory;
+
+    [Header("ItemUI Components")]
     [SerializeField] private RectTransform itemDragHandler;
     [SerializeField] private Image icon;
+    [SerializeField] private Image pickArea;
     [SerializeField] private Text quantityUI;
     [SerializeField] private Text itemNameUI;
     [SerializeField] private Text descriptionUI;
     [SerializeField] private GameObject descriptionParentUI;
     [SerializeField] private Button removeButton;
 
+    private InventoryManager manager;
     private CanvasGroup canvasGroup;
-    private Image image;
+    private RectTransform rectTransform;
+    private Transform originalSlot;
 
     public Item item;
     public int quantity;
     public int slotIndex;
 
-    private Transform originalSlot;
-
-    public void SetComponents()
+    public void InitializeItemUI(InventoryManager inventoryManager, int index)
     {
+        manager = inventoryManager;
+        slotIndex = index;
         canvasGroup = GetComponent<CanvasGroup>();
-        image = GetComponent<Image>();
-        image.enabled = false;
+        rectTransform = GetComponent<RectTransform>();
         originalSlot = transform.parent;
-        slotIndex = transform.parent.GetSiblingIndex();
     }
 
-    public void InitializeItemUI(Item itemReference, int itemQuantity)
+    public void Refresh()
     {
-        image.enabled = true;
+        InventorySlot slot = inventory.GetSlot(slotIndex);
+
+        if (!slot.item)
+        {
+            ClearItemUI();
+            return;
+        }
+
+        if (slot.item != item)
+        {
+            SetData(slot.item, slot.quantity);
+        }
+        else if (slot.quantity != quantity)
+        {
+            UpdateQuantity(slot.quantity);
+        }
+    }
+    
+    private void SetData(Item itemReference, int itemQuantity)
+    {
+        pickArea.enabled = true;
         item = itemReference;
         quantity = itemQuantity;
         icon.sprite = item.itemIcon;
@@ -40,28 +64,18 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         itemNameUI.text = item.itemName;
         descriptionUI.text = item.itemDescription;
         quantityUI.text = itemQuantity.ToString();
-        GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        rectTransform.anchoredPosition = Vector2.zero;
     }
 
-    public void UpdateQuantity(int itemQuantity)
+    private void UpdateQuantity(int itemQuantity)
     {
-        quantityUI.text = itemQuantity.ToString();
         quantity = itemQuantity;
+        quantityUI.text = itemQuantity.ToString();
     }
 
-    public void RemoveItem()
+    private void ClearItemUI()
     {
-        PlayerInventory.Instance.RemoveItem(item, slotIndex);
-    }
-
-    public void UseItem()
-    {
-        PlayerInventory.Instance.UseItem(item, slotIndex);
-    }
-
-    public void ClearItemUI()
-    {
-        image.enabled = false;
+        pickArea.enabled = false;
         icon.enabled = false;
         icon.sprite = null;
         descriptionUI.text = null;
@@ -88,7 +102,12 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private void ResetPosition()
     {
         transform.SetParent(originalSlot);
-        GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        rectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    public void RemoveItem()
+    {
+        manager.RemoveItem(slotIndex);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -107,7 +126,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
-        GetComponent<RectTransform>().SetParent(itemDragHandler);
+        rectTransform.SetParent(itemDragHandler);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -128,4 +147,5 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         ResetPosition();
         DisableSlotElements();
     }
+    
 }

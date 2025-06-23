@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
+    [SerializeField] private InventorySO inventory;
     [SerializeField] private Item item;
 
     SpriteRenderer spriteRenderer;
@@ -16,7 +17,7 @@ public class ItemController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerInventory.Instance.AddItem(item);
+            inventory.AddItem(item);
             AudioManager.Instance.PlayPick();
             Destroy(gameObject);
         }
