@@ -29,6 +29,11 @@ public class InventorySO : ScriptableObject
         onInventoryChanged.Raise();
     }
 
+    public int GetSlotCount() 
+    { 
+        return maxSlots; 
+    }
+
     public InventorySlot GetSlot(int index) 
     {
         if (index < 0 || index >= slots.Count)
