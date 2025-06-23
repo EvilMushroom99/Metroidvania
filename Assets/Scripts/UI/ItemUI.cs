@@ -7,7 +7,6 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     [SerializeField] private InventorySO inventory;
 
     [Header("ItemUI Components")]
-    [SerializeField] private RectTransform itemDragHandler;
     [SerializeField] private Image icon;
     [SerializeField] private Image pickArea;
     [SerializeField] private Text quantityUI;
@@ -20,18 +19,20 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private Transform originalSlot;
+    private RectTransform itemDragHandler;
 
     public Item item;
     public int quantity;
     public int slotIndex;
 
-    public void InitializeItemUI(InventoryManager inventoryManager, int index)
+    public void InitializeItemUI(InventoryManager inventoryManager, int index, RectTransform dragHandler)
     {
         manager = inventoryManager;
         slotIndex = index;
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         originalSlot = transform.parent;
+        itemDragHandler = dragHandler;
     }
 
     public void Refresh()
