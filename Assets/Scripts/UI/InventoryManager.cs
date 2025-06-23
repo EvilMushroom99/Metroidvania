@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform inventoryParent;
+    [SerializeField] private RectTransform itemDragHandler;
 
     private List<ItemUI> items = new();
 
@@ -22,7 +23,7 @@ public class InventoryManager : MonoBehaviour
         {
             GameObject slot = Instantiate(slotPrefab, inventoryParent);
             ItemUI itemUI = slot.GetComponentInChildren<ItemUI>();
-            itemUI.InitializeItemUI(this, i);
+            itemUI.InitializeItemUI(this, i, itemDragHandler);
             items.Add(itemUI);
         }
     }

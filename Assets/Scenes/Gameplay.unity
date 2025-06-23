@@ -338,6 +338,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 1579054172279628743, guid: d757bc2dc4cab40408a54b45c734d43b, type: 3}
   inventoryPanel: {fileID: 1435243704}
   inventoryParent: {fileID: 461857276}
+  itemDragHandler: {fileID: 1470973441}
 --- !u!114 &70456716
 MonoBehaviour:
   m_ObjectHideFlags: 0
