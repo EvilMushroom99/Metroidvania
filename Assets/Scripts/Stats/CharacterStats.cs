@@ -26,7 +26,9 @@ public class CharacterStats : MonoBehaviour
     {
         if (_stats.TryGetValue(type, out var stat))
         {
+            Debug.Log("stat: " + stat.statDef.statType + " value: " + stat.Value);
             stat.AddModifier(amount);
+            Debug.Log("stat: " + stat.statDef.statType + " value: " + stat.Value);
         }
     }
 
