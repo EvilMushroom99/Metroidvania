@@ -1,23 +1,21 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Speed Settings")]
-    [SerializeField] private float speed;
-    public float speedMultiplier;
-
     [Header("Jump Settings")]
     [SerializeField] private Transform jumpPoint;
     [SerializeField] private float jumpDetection;
-    public float jumpForce;
     [SerializeField] private LayerMask layerMask;
 
     public GameEvent onInventoryOpen;
 
-    Rigidbody2D rb;
-    Animator anim;
-    SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+    private CharacterStats stats;
+    private float direction;
 
     private PlayerInput playerInput;
 
@@ -30,6 +28,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         anim = GetComponent<Animator>();
+        stats = GetComponent<CharacterStats>();
     }
 
     private void OnEnable()
@@ -46,14 +45,14 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed)
         {
             isRunning = true;
-            speed = axisValue;
-            spriteRenderer.flipX = !(speed > 0f);
+            direction = axisValue;
+            spriteRenderer.flipX = !(direction > 0f);
 
         }
         else if (ctx.canceled)
         {
             isRunning = false;
-            speed = 0f;
+            direction = 0f;
         }
     }
 
@@ -61,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed && isGrounded)
         {
-            rb.AddForce(new Vector2(rb.linearVelocity.x, jumpForce), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(rb.linearVelocity.x, stats.GetStat(StatType.JumpForce)), ForceMode2D.Impulse);
             AudioManager.Instance.PlayJump();
         }
     }
@@ -79,7 +78,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(jumpPoint.position, jumpDetection, layerMask);
-        rb.linearVelocity = new Vector2(speedMultiplier * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(stats.GetStat(StatType.Speed) * direction, rb.linearVelocity.y);
     }
 
     private void LateUpdate()
