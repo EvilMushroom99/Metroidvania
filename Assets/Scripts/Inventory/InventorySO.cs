@@ -132,4 +132,10 @@ public class InventorySO : ScriptableObject
         slot.item = null;
         slot.quantity = 0;
     }
+
+    public void UseItem(int index, GameObject user)
+    {
+        slots[index].item.Use(user);
+        RemoveItem(slots[index].item, index);
+    }
 }
