@@ -38,7 +38,6 @@ public class InventoryPersistence : MonoBehaviour
     {
         inventory.InitializeInventory();
         string fullpath = Path.Combine(Application.persistentDataPath, "inventory.json");
-        //Debug.Log(fullpath);
         if (File.Exists(fullpath))
         {
             string json = File.ReadAllText(fullpath);
@@ -64,7 +63,7 @@ public class SlotData
 [Serializable]
 public class SlotDataList
 {
-    public List<SlotData> slots = new List<SlotData>();
+    public List<SlotData> slots = new();
 }
 
 

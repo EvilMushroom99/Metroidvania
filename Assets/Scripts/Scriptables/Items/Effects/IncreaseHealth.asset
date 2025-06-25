@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0efdb8bc6d2fb74492462c2a6839a96, type: 3}
-  m_Name: SuperBerry
+  m_Script: {fileID: 11500000, guid: 187f9af95f5cd0f4fa4ed112ba503d00, type: 3}
+  m_Name: IncreaseHealth
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: SuperBerry!
-  itemDescription: Restore all your health!
-  stack: 1
-  itemIcon: {fileID: -5428206428529569624, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
-  healAmount: 999
+  statType: 0
+  amount: 10

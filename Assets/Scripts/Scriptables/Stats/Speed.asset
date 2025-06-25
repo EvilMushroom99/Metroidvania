@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f1d1b2a34ea9140a53351186d8064c, type: 3}
-  m_Name: MushroomPower
+  m_Script: {fileID: 11500000, guid: fc94ec7ec304a3c46bf672214c03573c, type: 3}
+  m_Name: Speed
   m_EditorClassIdentifier: 
-  id: 3
-  itemName: MushroomPower
-  itemDescription: Jump higher!
-  stack: 3
-  itemIcon: {fileID: -7833671090200325546, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
-  jumpAmount: 1
+  statType: 3
+  displayName: Speed
+  description: Velocity of the character
