@@ -111,6 +111,11 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         manager.RemoveItem(slotIndex);
     }
 
+    public void UseItem()
+    {
+        manager.UseItem(slotIndex);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!eventData.pointerDrag)

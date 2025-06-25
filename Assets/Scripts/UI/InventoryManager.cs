@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private InventorySO inventory;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform inventoryParent;
     [SerializeField] private RectTransform itemDragHandler;
 
-    private List<ItemUI> items = new();
+    private readonly List<ItemUI> items = new();
 
     private void Awake()
     {
@@ -47,6 +48,11 @@ public class InventoryManager : MonoBehaviour
         {
             items[i].Refresh();
         }
+    }
+
+    public void UseItem(int slotIndex)
+    {
+        inventory.UseItem(slotIndex, player);
     }
 
     public void RemoveItem(int slotIndex)

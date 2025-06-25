@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73eb27020a020f34795109e4ebed2e62, type: 3}
+  m_Name: Mushroom
+  m_EditorClassIdentifier: 
+  id: 0
+  itemName: Mushroom
+  itemDescription: Increase your Jump Force
+  stack: 3
+  itemIcon: {fileID: -7833671090200325546, guid: 31f1144115e5a2543a57c8c1a0eeb9e4, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 92fd7e53257c67a44854b62a3a49744a, type: 2}
