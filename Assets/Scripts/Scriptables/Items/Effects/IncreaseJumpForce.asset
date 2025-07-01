@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187f9af95f5cd0f4fa4ed112ba503d00, type: 3}
   m_Name: IncreaseJumpForce
   m_EditorClassIdentifier: 
-  statType: 0
+  statType: 4
   amount: 1
