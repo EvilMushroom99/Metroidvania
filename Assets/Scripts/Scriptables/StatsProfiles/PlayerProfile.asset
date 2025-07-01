@@ -18,4 +18,6 @@ MonoBehaviour:
   - stat: {fileID: 11400000, guid: f0ab31d0e7b3b9b4284bfdb93318d4be, type: 2}
     baseValue: 1
   - stat: {fileID: 11400000, guid: 195618f04cd280441911bef0142ac13c, type: 2}
-    baseValue: 7
+    baseValue: 2
+  - stat: {fileID: 11400000, guid: 67c26bcdc65d69a4cbe52531a00b278a, type: 2}
+    baseValue: 5
