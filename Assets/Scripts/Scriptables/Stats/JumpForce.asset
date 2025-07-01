@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94ec7ec304a3c46bf672214c03573c, type: 3}
   m_Name: JumpForce
   m_EditorClassIdentifier: 
-  statType: 0
-  displayName: 
-  description: 
+  statType: 4
+  displayName: Jump Force
+  description: Jump Force
