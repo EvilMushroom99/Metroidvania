@@ -4390,9 +4390,10 @@ MonoBehaviour:
   direction: 0
   isGrounded: 0
   isRunning: 0
+  rollRequested: 0
   jumpRequested: 0
   attackRequested: 0
-  rollRequested: 0
+  rollCooldown: 1
   jumpPoint: {fileID: 1427951780}
   jumpDetection: 0.1
   layerMask:

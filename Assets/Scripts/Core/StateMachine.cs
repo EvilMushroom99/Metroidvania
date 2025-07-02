@@ -6,10 +6,8 @@ public class StateMachine : MonoBehaviour
 
     public void ChangeState(CharacterState newState)
     {
-        Debug.Log(currentState);
         currentState?.Exit();         
         currentState = newState;
-        Debug.Log(currentState);
         currentState.Enter();         
     }
 
