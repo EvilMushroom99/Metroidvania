@@ -1118,6 +1118,138 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: todd_roll_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 304
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9dd7d4ff84c5c49a8a36999baaf7f6
+      internalID: 1218601142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_roll_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 304
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff3562829b16ef42a27f570753a3d03
+      internalID: -1828425225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_roll_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 304
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff7cefa6addb224fb386281d0ba046a
+      internalID: -1331628905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_roll_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 304
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a20354382270c49a2f451888f53786
+      internalID: 187233724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_roll_4
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 304
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2d6503dfe46954da209c9bd8bf35a6
+      internalID: -177841955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd_roll_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 304
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295332a13b7d36b4dbd4fdbab9004d07
+      internalID: -782808253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1132,8 +1264,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      todd_0: -4776523847721300896
-      todd_1: -3967027150470514207
       todd_10: -5001060994606152071
       todd_100: 6339958456396511746
       todd_101: 8923733166458407870
@@ -1233,6 +1363,12 @@ TextureImporter:
       todd_pickingUp_3: -5041896264710881152
       todd_pickingUp_4: -6639786207184447979
       todd_pickingUp_5: 7119495341406688203
+      todd_roll_0: -4776523847721300896
+      todd_roll_1: -3967027150470514207
+      todd_roll_2: -1331628905
+      todd_roll_3: 187233724
+      todd_roll_4: -177841955
+      todd_roll_5: -782808253
       todd_running_0: -31271376325666959
       todd_running_1: 8526588872844585643
       todd_running_2: -8974100353740748981

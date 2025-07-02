@@ -46,7 +46,8 @@ public class InventorySO : ScriptableObject
 
     public List<InventorySlot> GetAllSlots()
     {
-        return new List<InventorySlot>(slots);
+        if(slots.Count != 0) return new List<InventorySlot>(slots);
+        else return new List<InventorySlot>();
     }
 
     public void AddItem(Item item)

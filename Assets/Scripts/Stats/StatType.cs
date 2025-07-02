@@ -5,6 +5,7 @@ public enum StatType
     Defense,
     Speed,
     JumpForce,
+    RollForce,
     MagicPower,
     AttackSpeed,
     CritChance

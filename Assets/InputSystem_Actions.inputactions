@@ -558,7 +558,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PickItem",
+                    "name": "Roll",
                     "type": "Button",
                     "id": "94e970ba-eced-406b-9166-22fd6a1db755",
                     "expectedControlType": "",
@@ -652,7 +652,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "PickItem",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f512431b-00b7-4251-9129-86bc893aa52a",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

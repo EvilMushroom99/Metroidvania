@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : CharacterBaseController
 {
+    [Header("Roll Cooldown")]
+    [SerializeField] private float rollCooldown = 1.0f;
+    private float _rollTimer = 0f;
+
     [Header("Jump Settings")]
     [SerializeField] private Transform jumpPoint;
     [SerializeField] private float jumpDetection;
@@ -27,6 +31,8 @@ public class PlayerController : CharacterBaseController
         _playerInput.actions["Move"].canceled += Move;
         _playerInput.actions["Jump"].performed += Jump;
         _playerInput.actions["Inventory"].performed += Inventory;
+        _playerInput.actions["Attack"].performed += Attack;
+        _playerInput.actions["Roll"].performed += Roll;
     }
 
     void Start()
@@ -37,7 +43,15 @@ public class PlayerController : CharacterBaseController
     void Update()
     {
         _stateMachine.Update();
+
+        if (_rollTimer > 0f)
+        {
+            rollRequested = false;
+            _rollTimer -= Time.deltaTime;
+        }
+
         jumpRequested = false;
+        attackRequested = false;
     }
 
     void FixedUpdate()
@@ -76,11 +90,27 @@ public class PlayerController : CharacterBaseController
         }
     }
 
+    private void Attack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed) attackRequested = true;
+    }
+
+    private void Roll(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && _rollTimer <= 0f)
+        {
+            rollRequested = true;
+            _rollTimer = rollCooldown;
+        }
+    }
+
     private void OnDisable()
     {
         _playerInput.actions["Move"].started -= Move;
         _playerInput.actions["Move"].canceled -= Move;
         _playerInput.actions["Jump"].performed -= Jump;
         _playerInput.actions["Inventory"].performed -= Inventory;
+        _playerInput.actions["Attack"].performed -= Attack;
+        _playerInput.actions["Roll"].performed -= Roll;
     }
 }
