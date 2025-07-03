@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterStats : MonoBehaviour
 {
     public CharacterStatsProfileSO profile;
-
+    public GameEvent onStatsChanged;
     private Dictionary<StatType, StatInstance> _stats;
 
     void Awake()
@@ -15,6 +15,7 @@ public class CharacterStats : MonoBehaviour
             StatInstance stat = new(){ baseValue = entry.baseValue, statDef = entry.stat};
             _stats[entry.stat.statType] = stat;
         }
+        onStatsChanged.Raise();
     }
 
     public int GetStat(StatType type)
@@ -26,9 +27,8 @@ public class CharacterStats : MonoBehaviour
     {
         if (_stats.TryGetValue(type, out var stat))
         {
-            Debug.Log("stat: " + stat.statDef.statType + " value: " + stat.Value);
             stat.AddModifier(amount);
-            Debug.Log("stat: " + stat.statDef.statType + " value: " + stat.Value);
+            onStatsChanged.Raise();
         }
     }
 
@@ -37,6 +37,7 @@ public class CharacterStats : MonoBehaviour
         if (_stats.TryGetValue(type, out var stat))
         {
             stat.RemoveModifier(amount);
+            onStatsChanged.Raise();
         }
     }
 }

@@ -50,7 +50,7 @@ public class InventorySO : ScriptableObject
         else return new List<InventorySlot>();
     }
 
-    public void AddItem(Item item)
+    public bool AddItem(Item item)
     {
         if (item.stack > 1)
         {
@@ -59,18 +59,19 @@ public class InventorySO : ScriptableObject
             {
                 existingSlot.quantity++;
                 onInventoryChanged.Raise();
-                return; //We added quantity to an existing item on the inventory
+                return true; //We added quantity to an existing item on the inventory
             }
         }
 
         InventorySlot emptySlot = slots.Find(slot => slot.item == null);
         if (emptySlot == null)
         {
-            return; //There is no more space in the inventory
+            return false; //There is no more space in the inventory
         }
         //We add an item in an empty slot
         AssignItemToSlot(emptySlot, item, 1);
         onInventoryChanged.Raise();
+        return true;
     }
     public void SwapOrStackItem(Item item, int quantity, int index, int sourceSlotIndex)
     {
