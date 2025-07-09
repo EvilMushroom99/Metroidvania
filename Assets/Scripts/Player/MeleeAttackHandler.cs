@@ -11,9 +11,9 @@ public class MeleeAttackHandler : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (Collider2D target in hitEnemies)
         {
-            //enemy.GetComponent<IDamageable>()?.TakeDamage(attackDamage);
+            target.GetComponent<IDamageable>()?.TakeDamage(attackDamage);
         }
     }
 }

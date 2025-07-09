@@ -11,6 +11,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        stats.RemoveModifier(StatType.Health, damage);
+        stats.RestBaseValue(StatType.Health, damage);
     }
 }

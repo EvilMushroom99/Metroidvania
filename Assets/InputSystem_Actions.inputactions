@@ -614,17 +614,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e5218e81-ca55-412a-a646-8de6ec9236eb",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d7d7ddbd-9935-4896-95fd-4e5eb2cbf3f8",
                     "path": "<Keyboard>/j",
                     "interactions": "",
