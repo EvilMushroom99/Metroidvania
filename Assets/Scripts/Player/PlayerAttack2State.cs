@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerAttack2State : CharacterState
+public class PlayerAttack2State : CharacterState<PlayerController>
 {
-    public PlayerAttack2State(StateMachine stateMachine, CharacterBaseController controller) : base(stateMachine, controller) { }
+    public PlayerAttack2State(StateMachine stateMachine, PlayerController controller) : base(stateMachine, controller) { }
 
     public override void Enter()
     {

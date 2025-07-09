@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PlayerAttack1State : CharacterState
+public class PlayerAttack1State : CharacterState<PlayerController>
 {
     private bool _queuedAttack2 = false;
 
-    public PlayerAttack1State(StateMachine stateMachine, CharacterBaseController controller) : base(stateMachine, controller) { }
+    public PlayerAttack1State(StateMachine stateMachine, PlayerController controller) : base(stateMachine, controller) { }
 
     public override void Enter()
     {

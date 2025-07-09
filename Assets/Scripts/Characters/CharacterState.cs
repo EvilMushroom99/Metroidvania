@@ -14,3 +14,13 @@ public abstract class CharacterState
     public abstract void FixedUpdate();
     public abstract void Exit();
 }
+
+public abstract class CharacterState<T> : CharacterState where T : CharacterBaseController
+{
+    protected new T _controller;
+
+    public CharacterState(StateMachine stateMachine, T controller) : base(stateMachine, controller)
+    {
+        _controller = controller;
+    }
+}

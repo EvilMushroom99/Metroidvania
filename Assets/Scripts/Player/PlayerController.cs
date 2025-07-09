@@ -7,15 +7,25 @@ public class PlayerController : CharacterBaseController
     [SerializeField] private float rollCooldown = 1.0f;
     private float _rollTimer = 0f;
 
-    [Header("Jump Settings")]
-    [SerializeField] private Transform jumpPoint;
-    [SerializeField] private float jumpDetection;
-    [SerializeField] private LayerMask layerMask;
+    [Header("Ground Settings")]
+    [SerializeField] private Transform groundPoint;
+    [SerializeField] private float groundDetection;
+    [SerializeField] private LayerMask groundMask;
 
     public GameEvent onInventoryOpen;
 
     private StateMachine _stateMachine;
     private PlayerInput _playerInput;
+
+    //States
+    public float direction;
+    public bool isGrounded;
+    public bool isRunning;
+    public bool rollRequested;
+    public bool jumpRequested;
+    public bool attackRequested;
+    public bool hitRequested;
+    public bool deathRequested;
 
     protected override void Awake()
     {
@@ -56,7 +66,7 @@ public class PlayerController : CharacterBaseController
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(jumpPoint.position, jumpDetection, layerMask);
+        isGrounded = Physics2D.OverlapCircle(groundPoint.position, groundDetection, groundMask);
         _stateMachine.FixedUpdate();
     }
 
@@ -69,7 +79,6 @@ public class PlayerController : CharacterBaseController
             direction = axisValue;
             if (direction > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
             else transform.localScale = new Vector3(-1f, 1f, 1f);
-            //spriteRenderer.flipX = !(direction > 0f);
         }
         else if (ctx.canceled)
         {

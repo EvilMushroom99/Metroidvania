@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PlayerRollState : CharacterState
+public class PlayerRollState : CharacterState<PlayerController>
 {
     private float _timer = 0f;
     private const float _minRollTime = 0.25f;
 
-    public PlayerRollState(StateMachine stateMachine, CharacterBaseController controller) : base(stateMachine, controller) { }
+    public PlayerRollState(StateMachine stateMachine, PlayerController controller) : base(stateMachine, controller) { }
 
     public override void Enter()
     {

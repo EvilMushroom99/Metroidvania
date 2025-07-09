@@ -7,13 +7,6 @@ public class CharacterBaseController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public CharacterStats stats;
 
-    public float direction;
-    public bool isGrounded;
-    public bool isRunning;
-    public bool rollRequested;
-    public bool jumpRequested;
-    public bool attackRequested;
-
     protected virtual void Awake()
     {
         anim = GetComponent<Animator>();

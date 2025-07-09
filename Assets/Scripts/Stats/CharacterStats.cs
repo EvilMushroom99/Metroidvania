@@ -15,7 +15,7 @@ public class CharacterStats : MonoBehaviour
             StatInstance stat = new(){ baseValue = entry.baseValue, statDef = entry.stat, maxValue = entry.maxValue};
             _stats[entry.stat.statType] = stat;
         }
-        onStatsChanged.Raise();
+        RaiseEvent();
     }
 
     public int GetStat(StatType type)
@@ -29,7 +29,7 @@ public class CharacterStats : MonoBehaviour
         {
             if (type == StatType.Health && stat.Value == stat.maxValue) return;
             stat.IncreaseBaseValue(amount);
-            onStatsChanged.Raise();
+            RaiseEvent();
         }
     }
 
@@ -38,7 +38,7 @@ public class CharacterStats : MonoBehaviour
         if (_stats.TryGetValue(type, out var stat))
         {
             stat.RestBaseValue(amount);
-            onStatsChanged.Raise();
+            RaiseEvent();
         }
     }
 
@@ -47,7 +47,7 @@ public class CharacterStats : MonoBehaviour
         if (_stats.TryGetValue(type, out var stat))
         {
             stat.AddModifier(amount);
-            onStatsChanged.Raise();
+            RaiseEvent();
         }
     }
 
@@ -56,8 +56,14 @@ public class CharacterStats : MonoBehaviour
         if (_stats.TryGetValue(type, out var stat))
         {
             stat.RemoveModifier(amount);
-            onStatsChanged.Raise();
+            RaiseEvent();
         }
+    }
+
+    private void RaiseEvent()
+    {
+        if (onStatsChanged != null)
+            onStatsChanged.Raise();
     }
 }
 

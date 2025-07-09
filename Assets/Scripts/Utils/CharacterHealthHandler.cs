@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IDamageable
+public class CharacterHealthHandler : MonoBehaviour, IDamageable
 {
     private CharacterStats stats;
 

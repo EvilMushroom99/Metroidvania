@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerFallState : CharacterState
+public class PlayerFallState : CharacterState<PlayerController>
 {
-    public PlayerFallState(StateMachine stateMachine, CharacterBaseController controller) : base(stateMachine, controller) { }
+    public PlayerFallState(StateMachine stateMachine, PlayerController controller) : base(stateMachine, controller) { }
 
     public override void Enter()
     {
