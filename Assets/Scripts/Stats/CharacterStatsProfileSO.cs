@@ -9,6 +9,7 @@ public class CharacterStatsProfileSO : ScriptableObject
     {
         public StatDefinitionSO stat;
         public int baseValue;
+        public int maxValue;
     }
 
     public List<StatEntry> stats;

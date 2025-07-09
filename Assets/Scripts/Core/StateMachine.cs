@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    private CharacterState currentState;
+    public CharacterState currentState;
 
     public void ChangeState(CharacterState newState)
     {
-        currentState?.Exit();         
+        Debug.Log("cerrando: " + currentState);
+        currentState?.Exit();
         currentState = newState;
-        currentState.Enter();         
+        currentState.Enter();
+        Debug.Log("entrando: " + currentState);
     }
 
     public void Update()

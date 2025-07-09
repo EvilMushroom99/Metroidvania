@@ -10,7 +10,7 @@ public class IncreaseStatEffectSO : ItemEffectSO
     {
         if (user.TryGetComponent<CharacterStats>(out var stats))
         {
-            stats.AddModifier(statType, amount);
+            stats.IncreaseBaseValue(statType, amount);
         }
     }
 }

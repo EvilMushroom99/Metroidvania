@@ -1,10 +1,11 @@
 public enum StatType
 {
-    MaxHealth,
+    Health,
     Strength,
     Defense,
     Speed,
     JumpForce,
+    RollForce,
     MagicPower,
     AttackSpeed,
     CritChance

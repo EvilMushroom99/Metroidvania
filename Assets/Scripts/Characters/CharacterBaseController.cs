@@ -10,7 +10,9 @@ public class CharacterBaseController : MonoBehaviour
     public float direction;
     public bool isGrounded;
     public bool isRunning;
+    public bool rollRequested;
     public bool jumpRequested;
+    public bool attackRequested;
 
     protected virtual void Awake()
     {
