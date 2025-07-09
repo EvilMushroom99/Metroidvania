@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd6d4805f21a4c45829bc29b876cd2f, type: 3}
-  m_Name: ItemDatabase
+  m_Script: {fileID: 11500000, guid: 0382ab93ef58dda4fa5a2323c91e491a, type: 3}
+  m_Name: StatsChangedEvent
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: 06613c5fc628e33499eb48928d10ea21, type: 2}
-  - {fileID: 11400000, guid: b790d18b6cbd404469e73b38cf9fefc2, type: 2}

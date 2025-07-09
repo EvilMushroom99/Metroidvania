@@ -17,9 +17,12 @@ public class ItemController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            inventory.AddItem(item);
-            AudioManager.Instance.PlayPick();
-            Destroy(gameObject);
+            bool itemAdded = inventory.AddItem(item);
+            if (itemAdded)
+            {
+                AudioManager.Instance.PlayPick();
+                Destroy(gameObject);
+            }
         }
     }
 }

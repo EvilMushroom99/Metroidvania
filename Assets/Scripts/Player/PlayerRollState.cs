@@ -35,7 +35,6 @@ public class PlayerRollState : CharacterState
 
     private float GetRollDirection()
     {
-        if (_controller.spriteRenderer.flipX) return -1f;
-        else return 1f;
+        return _controller.transform.localScale.x;
     }
 }

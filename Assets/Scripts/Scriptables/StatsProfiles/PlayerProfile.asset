@@ -15,11 +15,16 @@ MonoBehaviour:
   stats:
   - stat: {fileID: 11400000, guid: 259fd80c280c3a442a0be735bf66876e, type: 2}
     baseValue: 3
+    maxValue: 3
   - stat: {fileID: 11400000, guid: f0ab31d0e7b3b9b4284bfdb93318d4be, type: 2}
     baseValue: 1
+    maxValue: 0
   - stat: {fileID: 11400000, guid: 195618f04cd280441911bef0142ac13c, type: 2}
     baseValue: 2
+    maxValue: 0
   - stat: {fileID: 11400000, guid: 67c26bcdc65d69a4cbe52531a00b278a, type: 2}
     baseValue: 5
+    maxValue: 0
   - stat: {fileID: 11400000, guid: 09f6a3f3ea53887499af88a5bae8b965, type: 2}
     baseValue: 5
+    maxValue: 0

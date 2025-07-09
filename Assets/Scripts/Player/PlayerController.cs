@@ -67,7 +67,9 @@ public class PlayerController : CharacterBaseController
         {
             isRunning = true;
             direction = axisValue;
-            spriteRenderer.flipX = !(direction > 0f);
+            if (direction > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
+            else transform.localScale = new Vector3(-1f, 1f, 1f);
+            //spriteRenderer.flipX = !(direction > 0f);
         }
         else if (ctx.canceled)
         {
